@@ -1,0 +1,18 @@
+IEGet(Name="") {
+   IfEqual, Name,, WinGetTitle, Name, ahk_class IEFrame
+      Name := ( Name="New Tab - Windows Internet Explorer" ) ? "about:Tabs" 
+      : RegExReplace( Name, " - (Windows|Microsoft) Internet Explorer" )
+   For Pwb in ComObjCreate( "Shell.Application" ).Windows
+      If ( Pwb.LocationName = Name ) && InStr( Pwb.FullName, "iexplore.exe" )
+         Return Pwb
+}
+ComObjError(0)
+
+Pwb := IEGet()
+Tables := Pwb.Document.All.Tags("Table")
+Loop % Tables.Length {
+   Table := Tables[A_Index]
+   Table_Index := A_Index
+   Loop % Table.Rows.Length
+      MsgBox % "Table " . Table_Index . " Row " . A_Index . " is`n" . Table.Rows[A_Index].InnerText
+}

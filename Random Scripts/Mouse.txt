@@ -1,0 +1,9 @@
+WinGet, wowid, List, World of Warcraft
+$F1::
+while Getkeystate("F1", "p")
+{
+ ControlClick, x200 y564,ahk_id %wowid1%,,LEFT,,NAPos
+ sleep, 1000
+}
+return
+

@@ -1,0 +1,16 @@
+~Printscreen:: 
+!~Printscreen:: 
+IfWinExist Untitled - Paint 
+{ 
+WinActivate, Untitled - Paint 
+WinWaitActive, Untitled - Paint 
+} 
+else 
+{ 
+Run Mspaint 
+Sleep 10 
+WinActivate, Untitled - Paint 
+WinWaitActive, Untitled - Paint 
+} 
+Send ^v 
+return 

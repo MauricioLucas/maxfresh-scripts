@@ -1,0 +1,9 @@
+F6::
+WinGet, wowid, List, World of Warcraft
+Loop
+{
+IfWinNotActive ahk_class GxWindowClass
+   ControlSend,,4, ahk_id %wowid1%
+   Sleep 5000 
+}
+F1::pause

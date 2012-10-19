@@ -1,0 +1,11 @@
+WinGet, WoW_ID, ID, World of Warcraft ;grab wow's unique id
+SetKeyDelay 1000 ;wait 1 second between key presses
+
+Loop
+IfWinActive, ahk_id %WoW_ID%
+{
+SendPlay, 44
+Sleep, 33000 ;wait 33 seconds
+}
+
+#p::Pause ;pauses the script

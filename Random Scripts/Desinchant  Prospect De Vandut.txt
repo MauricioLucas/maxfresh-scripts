@@ -1,0 +1,39 @@
+F7::
+SetTimer, Check, 20
+SetTimer, Loops, 20
+SetTimer, Sell, 30000
+return
+
+Loops:
+IfWinNotActive ahk_class GxWindowClass 
+{
+if keys > 0
+return
+else
+{
+ControlSend,,4, ahk_class GxWindowClass 
+Sleep 1000
+}
+}
+return
+
+check:
+key1 := GetKeyState("Shift","P")
+key2 := GetKeyState("Ctrl","P")
+key3 := GetKeyState("Alt","P")
+keys := key1+key2+key3
+return
+
+sell:
+IfWinNotActive ahk_class GxWindowClass
+{
+if keys > 0
+return
+else
+{
+ControlSend,,56, ahk_class GxWindowClass
+}
+}
+return
+
+F3::Pause

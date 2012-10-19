@@ -1,0 +1,16 @@
+F1::
+#SingleInstance Force
+Pwb := IEGet()
+Pwb.Document.All.qty_delivered_4307621.Value := "Works!"
+
+IEGet(Name="") { ;Retrieve pointer to IE
+   IfEqual, Name,, WinGetTitle, Name, ahk_class IEFrame
+      Name := ( Name="New Tab - Windows Internet Explorer" ) ? "about:Tabs" 
+      : RegExReplace( Name, " - (Windows|Microsoft) Internet Explorer" )
+   For Pwb in ComObjCreate( "Shell.Application" ).Windows
+      If ( Pwb.LocationName = Name ) && InStr( Pwb.FullName, "iexplore.exe" )
+         Return Pwb
+}
+ExitApp
+
+

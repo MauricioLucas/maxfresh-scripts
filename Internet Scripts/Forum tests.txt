@@ -1,0 +1,16 @@
+F6::
+Loop
+{
+   IfWinActive ahk_class GxWindowClass
+{
+       Send, 44
+       Sleep, 10000
+}
+   IfWinNotActive ahk_class GxWindowClass
+{
+       ControlSend,,3, ahk_class GxWindowClass
+       Sleep, 1000
+}
+}
+Return
+F2::pause

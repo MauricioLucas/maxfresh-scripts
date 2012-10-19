@@ -1,0 +1,22 @@
+#SingleInstance Force
+ComObjError(0)
+
+Pwb := IEGet()
+Tables := Pwb.Document.All.Tags("Table")
+Cell := Tables[11].Rows[5].Cells[1].innerText
+
+StringSplit, Array, Cell, `n
+Form_Number := "qty_delivered_" . Array5
+Line := Array1
+StringSplit, Array, Line, %A_Space%
+Amount := Array8
+
+Pwb.Document.All(Form_Number).Value := Amount
+IEGet(Name="") {
+   IfEqual, Name,, WinGetTitle, Name, ahk_class IEFrame
+      Name := ( Name="New Tab - Windows Internet Explorer" ) ? "about:Tabs" 
+      : RegExReplace( Name, " - (Windows|Microsoft) Internet Explorer" )
+   For Pwb in ComObjCreate( "Shell.Application" ).Windows
+      If ( Pwb.LocationName = Name ) && InStr( Pwb.FullName, "iexplore.exe" )
+         Return Pwb
+}
