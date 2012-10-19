@@ -15,7 +15,7 @@ Loops:
 IfWinNotActive ahk_pid %pid1% 
 {
 postmsg("4", pid1)
-Sleep 1000
+Sleep 1100
 }
 return
 
