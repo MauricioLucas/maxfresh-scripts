@@ -1,0 +1,13 @@
+F6::
+settimer,action,1000
+return
+
+F1::
+settimer,action,off
+return
+
+
+action:
+IfWinNotActive ahk_class GxWindowClass
+ControlSend,,4, ahk_class GxWindowClass
+return

@@ -1,0 +1,13 @@
+Ctrl:: 
+Send {Ctrl Down}
+SetTimer ReleaseIt, -30000
+Return
+
+ReleaseIt:
+Send {Ctrl Up}
+Return
+
+ctrl up:: send % (on:=!on) ? "{control down}" : "{control up}"
+
++s::
+^+s::Send 0

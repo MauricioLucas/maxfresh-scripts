@@ -1,0 +1,8 @@
+iLoad(Pwb) { ;waits for page to load
+   While (Pwb.ReadyState != 4 Or Pwb.Document.ReadyState != "Complete" Or Pwb.Busy)
+      Sleep, 100
+   Loop
+      Sleep, 100
+   Until (Pwb.ReadyState = 4 And Pwb.Document.ReadyState = "Complete" And !Pwb.Busy)
+Return
+}

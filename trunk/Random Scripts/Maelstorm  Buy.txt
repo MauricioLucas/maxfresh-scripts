@@ -1,0 +1,23 @@
+F6::
+SetTimer, Check, 20
+SetTimer, Loops, 20
+return
+
+Loops:
+if keys > 0
+return
+else
+{
+     ControlSend,,77, ahk_class GxWindowClass
+     Sleep 33000
+}
+return
+
+check:
+key1 := GetKeyState("Shift","P")
+key2 := GetKeyState("Ctrl","P")
+key3 := GetKeyState("Alt","P")
+keys := key1+key2+key3
+return
+
+F2::Pause
