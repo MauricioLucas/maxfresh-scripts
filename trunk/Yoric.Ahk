@@ -7,5 +7,5 @@ $`::
       Return
 
    SetKeyDelay, 30, 30 ; 30ms or more seems to be good for commands
-   Send, zu ; DOING THIS MAY BE AGAINST THE LOL TOS!! Do so at your own risk!
+   Send, -u ; DOING THIS MAY BE AGAINST THE LOL TOS!! Do so at your own risk!
 Return
