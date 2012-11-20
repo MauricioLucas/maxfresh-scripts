@@ -1,0 +1,25 @@
+----------------------------------------------------
+                  GLOBAL SETTINGS                   
+----------------------------------------------------
+  Maximum buys        0
+  Slow mode factor    1
+  Random pause length 3
+
+----------------------------------------------------
+               SEARCH PARAMETER SET 1
+----------------------------------------------------
+  class               Barbarian
+  Main category       Armor
+  Sub category        Gloves
+  Rarity              Rare
+  Stat 1              8   Critical Hit Chance
+  Stat 2              35  Critical Hit Damage
+  Stat 3              6   Attack Speed %
+  Min weapon damage   
+  Min damage gap      
+  Max buyout price    200000
+  Min armor value     
+  Repetitions         10
+  Min required lvl    60
+  Max required lvl    60
+  Set/legendary name  
