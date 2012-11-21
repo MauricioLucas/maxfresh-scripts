@@ -1,10 +1,13 @@
 F1::
-{
-MouseClickDrag, left, 478, 479, 260, 483
-send imm
-sleep 50
-ControlClick, x432 y663,ahk_class D3 Main Window Class,,LEFT,,NAPos
+Test()
 return
-}
 
 F2::Pause
+
+Test()
+{
+ControlClick, x161 y428,ahk_class D3 Main Window Class,,LEFT,,NAPos
+sleep 3000
+ControlClick, x320 y158,ahk_class D3 Main Window Class,,LEFT,,NAPos
+sleep 3000
+}
