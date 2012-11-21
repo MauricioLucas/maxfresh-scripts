@@ -1,6 +1,25 @@
 F1::
-ImageSearch, outx, outy, 0, 0, 1680, 1050, d:\diablo\test1.bmp
+Loop, 10
 {
-ControlClick, x%outx% y%outy%,ahk_class D3 Main Window Class,,LEFT,,NAPos
-return
+    ImageSearch, X, Y, 0, 0, A_ScreenWidth, A_ScreenHeight, c:\test1.bmp
+    If A_Index = 10
+    {
+        If ErrorLevel = 0
+        {
+            MsgBox, Found at the last loop
+            Break
+        }
+        Else
+        {
+            MsgBox, Not found after 10 loop
+            Break
+        }
+    }
+    Else If !ErrorLevel
+    {
+        MsgBox, Found at Loop %a_Index%
+        Break
+    }
+    Sleep, 2000
 }
+Return
