@@ -31,7 +31,9 @@ Loop
 }
 
 F2::Pause
- ; settings are here
+ ; Tabs   legendara, armura, arma, stats, price
+ ; Tabs Content		amulet,mace,ring
+ ; Stats Content	str, vit, crtd, crtc, atks, sock, dmg
 settings1()
 {
 	legendara("Immortal King's Stride")
