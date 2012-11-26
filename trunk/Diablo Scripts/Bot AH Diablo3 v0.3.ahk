@@ -96,7 +96,7 @@ item(text)
 			}
 			else
 			{
-				MsgBox Fail To Start The AH
+				MsgBox Fail To Start The AH At The Time %A_Now%
 				ExitApp
 			}
 		}
