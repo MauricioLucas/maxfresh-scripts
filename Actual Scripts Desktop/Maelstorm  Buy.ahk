@@ -7,7 +7,7 @@ Loop, %id%
    pid%A_Index% := this_pid
 }
 SetTimer, Loops, 20
-SetTimer, Macro, -100
+;SetTimer, Macro, -100
 return
 
 Loops:
