@@ -102,7 +102,7 @@ Loop
 		stats(2,"crtc",5)
 		stats(3,"crtd",20)
 		stats(4,"vit","")
-		price(400000,2)
+		price(500000,2)
 	}
 	
 	;item 7
@@ -162,7 +162,7 @@ Loop
 		legendara("Echoing Fury",1)
 		stats(1,"crtd",50)
 		stats(2,"sock","")
-		price(3000000,2)
+		price(1500000,2)
 	}
 	
 	;item 15
@@ -186,7 +186,7 @@ Loop
 		legendara("Tal Rasha's Relentless Pursuit","")
 		;stats(1,"dmg",870)
 		;stats(2,"sock",2)
-		price(500000,2)
+		price(700000,2)
 	}
 	
 	;item 18
@@ -194,7 +194,7 @@ Loop
 		legendara("Zunimassa's Trail","")
 		;stats(1,"dmg",870)
 		;stats(2,"sock",2)
-		price(600000,2)
+		price(900000,2)
 	}
 
 	;item 19
@@ -202,7 +202,7 @@ Loop
 		legendara("Inna's Vast Expanse","")
 		;stats(1,"dmg",870)
 		;stats(2,"sock",2)
-		price(1500000,2)
+		price(1200000,2)
 	}
 
 	;item 20
@@ -210,7 +210,7 @@ Loop
 		legendara("Natalya's Bloody Footprints","")
 		;stats(1,"dmg",870)
 		;stats(2,"sock",2)
-		price(700000,2)
+		price(1000000,2)
 	}
 }
 
