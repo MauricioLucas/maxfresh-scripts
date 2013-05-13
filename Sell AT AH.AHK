@@ -7,7 +7,7 @@ Loop, %id%
 }
 
 SetTimer, Loops, 20
-;SetTimer, Sell, 30000
+SetTimer, Sell, 180000
 ;SetTimer, Ah, 120000
 return
 
@@ -15,7 +15,9 @@ Loops:
 IfWinNotActive ahk_pid %pid1% 
 {
 postmsg("4", pid1)
-Sleep 200
+sleep 50
+postmsg("3", pid1)
+Sleep 1000
 }
 return
 
@@ -24,8 +26,8 @@ sell:
 IfWinNotActive ahk_pid %pid1% 
 {
 postmsg("5", pid1)
-sleep 200
-postmsg("6", pid1)
+;sleep 200
+;postmsg("6", pid1)
 }
 return
 
