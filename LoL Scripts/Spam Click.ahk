@@ -1,9 +1,24 @@
-f1::
+$f3::
+MouseGetPos, thx, thy
+return
+
+$f1::
 Loop
 {
-	MouseClick, left, 400, 200
+	Sleep 1000
+	;~ MouseClick, Left, %thx%, %thy%
+	MouseMove, %thx%, %thy%
+	Sleep 100
+	Send {a down}
+	sleep 10
+	Send {a up}
 }
 
-f2::Pause
+~x::
+MouseClick, Right, 323, 781
+return
 
-f3::Reload
+
+
+$f2::Pause
+
