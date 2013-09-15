@@ -2,12 +2,9 @@ f1::
 InputBox, TTime,,,,150,100,743,579,,,How Mani
 loop %ttime%
 {
-	MouseClick, Left, 554, 392
-	Sleep 100
-	
-	loop 3
+	loop 4
 	{
-		MouseClick, Left, 303, 357
+		Send {enter}
 		Sleep 100
 	}
 	
@@ -15,10 +12,14 @@ loop %ttime%
 	
 	send %a_index%
 	
-	MouseClick, Left, 303, 357
-	Sleep 2000
-	MouseClick, Left, 303, 357
-	Sleep 100
+	loop 2
+	{
+		send {enter}
+		if a_index = 1
+			Sleep 2000
+		else
+			Sleep 100
+	}
 }
 return
 
